@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 Data
 
-Due to file size constraints, the dataset is not included in this repository. You can obtain the data from the Kaggle Rossmann Store Sales competition. After downloading, place the CSV files in the data/ directory.
+Due to file size constraints, the dataset is not included in this repository. You can obtain the data from the Kaggle Rossmann Store Sales competition(https://www.kaggle.com/competitions/rossmann-store-sales/data). After downloading, place the CSV files in the data/ directory.
 Running the Analysis
 
     Data Exploration and Preprocessing:
