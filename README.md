@@ -68,11 +68,4 @@ Future Work
         Develop a user-friendly interface for store managers to access sales forecasts.
         Implement real-time prediction capabilities to adapt to changing conditions.
 
-Contributing
 
-Contributions are welcome! Please fork this repository and submit a pull request for any enhancements or bug fixes.
-
-Acknowledgments
-
-    Kaggle for providing the Rossmann Store Sales dataset.
-    The data science community for continuous support and inspiration.
