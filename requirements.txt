@@ -9,3 +9,4 @@ pandas
 numpy
 tensorflow
 scikit-learn
+fastapi-cors

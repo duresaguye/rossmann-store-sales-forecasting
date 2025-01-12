@@ -1,9 +1,12 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import pandas as pd
 import numpy as np
 import tensorflow as tf
 import os
+import joblib
+
 
 app = FastAPI()
 import os
@@ -15,6 +18,16 @@ model_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../models/s
 
 # Load the trained model using the SavedModel format
 model = tf.keras.models.load_model(model_dir, compile=False)
+
+# Enable CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
+
 
 class PredictionRequest(BaseModel):
     Store: int
@@ -63,3 +76,4 @@ def predict(request: PredictionRequest):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+#curl -X POST "http://127.0.0.1:8000/predict" -H "accept: application/json" -H "Content-Type: application/json" -d '{"Store": 1, "DayOfWeek": 5, "Date": "2015-07-31", "Customers": 555, "Open": 1, "Promo": 1, "StateHoliday": "0", "SchoolHoliday": 1}'

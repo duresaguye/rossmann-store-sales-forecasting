@@ -1,3 +1,4 @@
 data
 .history
 venv
+dashboard/.gitignore
