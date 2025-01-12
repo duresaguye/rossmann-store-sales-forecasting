@@ -14,7 +14,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 
 # Get the absolute path to the model directory
-model_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../models/sales_model'))
+model_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), './sales_model'))
 
 # Load the trained model using the SavedModel format
 model = tf.keras.models.load_model(model_dir, compile=False)
