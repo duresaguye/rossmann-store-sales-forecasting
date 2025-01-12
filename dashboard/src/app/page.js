@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import axios from "axios";
+import EDA from "./components/EDA";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -64,7 +65,9 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-gray-800">
+    <>
+      <EDA />
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-gray-800">
       <h1 className="text-3xl font-bold mb-6">Sales Prediction</h1>
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
         {Object.keys(formData).map((field) => (
@@ -97,6 +100,8 @@ export default function Home() {
           </p>
         </div>
       )}
-    </div>
+      </div>
+     
+    </>
   );
 }
