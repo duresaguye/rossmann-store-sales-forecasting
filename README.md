@@ -1,4 +1,4 @@
-# Rossmann Store Sales Forecasting
+# Store Sales Forecasting
 
 ## Project Overview
 
