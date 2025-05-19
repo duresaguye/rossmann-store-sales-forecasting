@@ -118,10 +118,5 @@ Deep Learning techniques are applied to predict future sales using a Long Short 
 ### Contribution
 Feel free to fork this repository, open issues, or submit pull requests for improvements or bug fixes. Collaboration is always welcome!
 
-### License
-This project is licensed under the [MIT License](LICENSE).
 
----
-
-Happy forecasting! 🎉
 
